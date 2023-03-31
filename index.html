@@ -29,10 +29,12 @@
             >
             <ul class="tabs-list">
               <li>
-                <a href="./index.html" class="tab-item">Studio</a>
+                <a href="./index.html" class="tab-item active">Studio</a>
               </li>
               <li>
-                <a href="./portfolio.html" class="tab-item">Portfolio</a>
+                <a href="./portfolio.html" class="tab-item tab-item-portfolio"
+                  >Portfolio</a
+                >
               </li>
               <li><a href="#" class="tab-item">Contacts</a></li>
             </ul>
@@ -60,9 +62,18 @@
       <section class="hero-section overlay">
         <div class="hero-container">
           <h1 class="h1-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="button hero-button">
+          <button type="button" class="button hero-button" data-modal-open>
             Order Service
           </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button type="button" class="modal-button-close" data-modal-close>
+                <svg class="close-button-icon">
+                  <use href="./images/icons.svg#close-button"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
         <div class=""></div>
       </section>
