@@ -20,6 +20,11 @@
     --footerActiveBackgroungColor: #31D0AA;
     /* Background Modal Color */
     --modal-Background: #FCFCFC;
+
+    /* Transition Type Function */
+    --type-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transition Time Function */
+    --time-function: 250ms;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////// */
@@ -157,7 +162,7 @@ ul {
 
     color: var(--h2-h3-background);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time-function) var(--type-function);
 }
 .tab-item.active::after {
     position: absolute;
@@ -193,7 +198,7 @@ ul {
 
     color: var(--nav-adress-p);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time-function) var(--type-function);
 }
 .address-item:hover, .address-item:focus {
     color: var(--activeButtonPortfolio);
@@ -257,8 +262,8 @@ ul {
     background-color: var(--span-activeButton);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--time-function) var(--type-function),
+    box-shadow var(--time-function) var(--type-function);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -334,6 +339,9 @@ ul {
     display: flex;
     gap: 24px;
 }
+.feature-item {
+    width: calc((100% - 72px) / 4);
+}
 .feature-icon-container {
     display: flex;
     justify-content: center;
@@ -402,7 +410,7 @@ ul {
 .team-link {
     background-color: var(--span-activeButton);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--time-function) var(--type-function);
 }
 .team-link:hover,
 .team-link:focus {
@@ -438,7 +446,7 @@ ul {
     border-radius: 4px;
     border: 1px solid var(--borderCustomersIcon);
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--time-function) var(--type-function);
 }
 .customer-link:hover, 
 .customer-link:focus {
@@ -456,7 +464,7 @@ ul {
 
     fill: var(--borderCustomersIcon);
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--time-function) var(--type-function);
 }
 .customer-icon:hover,
 .customer-icon:focus {
@@ -490,9 +498,9 @@ ul {
     color: var(--span-activeButton);
     background-color: var(--background-studioWord-text);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    backfround-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time-function) var(--type-function),
+    backfround-color var(--time-function) var(--type-function),
+    box-shadow var(--time-function) var(--type-function);
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -510,7 +518,7 @@ ul {
 .portfolio-item {
     width: ((100%-48px)/3);
 
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--time-function) var(--type-function);
 }
 .portfolio-item:hover .hidden-text-overlay {
     transform: translateY(0);
@@ -558,7 +566,7 @@ ul {
 
     transform: translateY(100%);
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--time-function) var(--type-function);
 }
 .portfolio-hidden-desc {
     position: absolute;
@@ -616,7 +624,7 @@ ul {
 .footer-link {
     background-color: rgba(255,255,255,0.1);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--time-function) var(--type-function);
 }
 .footer-link:hover,
 .footer-link:focus {
